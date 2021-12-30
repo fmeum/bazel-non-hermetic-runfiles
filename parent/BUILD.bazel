@@ -1,0 +1,9 @@
+java_binary(
+    name = "Parent",
+    srcs = ["Parent.java"],
+    data = [
+        "//child",
+    ],
+    main_class = "parent.Parent",
+    deps = ["@bazel_tools//tools/java/runfiles"],
+)

@@ -1,0 +1,9 @@
+cc_binary(
+    name = "child",
+    srcs = ["child.cpp"],
+    data = [
+        "//data:foo.txt",
+    ],
+    visibility = ["//visibility:public"],
+    deps = ["@bazel_tools//tools/cpp/runfiles"],
+)
